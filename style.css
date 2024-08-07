@@ -5,6 +5,18 @@
   --rose-white: #fecdd3;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/Roboto-Bold.ttf'),
+       url('./assets/Roboto-Regular.ttf');
+  font-weight: 700;
+  font-weight: normal;
+}
+
+* {
+  font-family: Georgia, 'Roboto', sans-serif;
+}
+
 body {
   background-color: var(--brown);
   border: 5px solid var(--rose-white);
@@ -13,10 +25,31 @@ body {
   height: 100%;
 }
 
+h1, p {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+p {
+  margin-top: 0.8rem;
+}
+
+.pages-read {
+  margin-bottom: 0.3rem;
+}
+
+.book {
+  margin-top: 0.3rem;
+}
+
 .book {
   background-color: var(--light-pink);
   color: white;
-  min-height: 450px;
+  min-height: 300px;
   line-height: 1.5;
   text-align: center;
   padding: 1rem;
@@ -27,7 +60,7 @@ body {
 }
 
 .book:hover {
-  border: 5px solid white;
+  box-shadow: 10px 5px black;
   cursor: pointer;
 }
 
@@ -92,6 +125,10 @@ button:hover {
   color: white;
   padding: 0.5rem 1.5rem;
   border: 2px solid white;
+}
+
+.toggle-read-btn {
+  margin-bottom: 0.4rem;
 }
 
 dialog {

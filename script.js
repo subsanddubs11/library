@@ -12,6 +12,7 @@ let bookAuthor;
 let bookPageCount;
 let readStatus;
 let toggleButtons;
+let removeButtons;
 let books;
 
 const dialog = document.getElementById('dialog');
@@ -44,8 +45,9 @@ function updateLibrary() {
     bookDiv.innerHTML = `
     <h3>${el.title}</h3>
     <p>By ${el.author}</p>
-    <p>${el.pages} pages, <strong>${el.read === 'yes' ? 'Read' : 'Not Read'}</strong></p>
+    <p class="pages-read">${el.pages} pages, <strong>${el.read === 'yes' ? 'Read' : 'Not Read'}</strong></p>
     <button class="toggle-read-btn">Toggle Read Status</button>
+    <button class="remove-btn">Remove Book</button>
   `;
     library.appendChild(bookDiv);
   })
@@ -60,12 +62,13 @@ function updateLibrary() {
     })
   })
 
-  books = document.querySelectorAll('.book')
-  books.forEach((el) => {
+  removeButtons = document.querySelectorAll('.remove-btn')
+  removeButtons.forEach((el) => {
     el.addEventListener('click', () => {
+      const parentDiv = event.target.parentNode;
       const divArray = Array.from(library.children);
-      myLibrary.splice(divArray.indexOf(el), 1);
-      el.remove();
+      myLibrary.splice(divArray.indexOf(parentDiv), 1);
+      parentDiv.remove();
     })
   })
 } 
