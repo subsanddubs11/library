@@ -1,0 +1,103 @@
+:root {
+  --rose-pink: #fb7185;
+  --brown: #4c0519;
+  --light-pink: #fda4af;
+  --rose-white: #fecdd3;
+}
+
+body {
+  background-color: var(--brown);
+  border: 5px solid var(--rose-white);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.book {
+  background-color: var(--light-pink);
+  color: white;
+  min-height: 450px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 1rem;
+  display: grid; 
+  grid-template: repeat(3, 1fr) / 1fr;
+  place-items: center;
+  box-shadow: none;
+}
+
+.book:hover {
+  border: 5px solid white;
+  cursor: pointer;
+}
+
+#library {
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(auto-fill, minmax(150px, 1fr));
+  gap: 25px;
+  padding: 0 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: paleturquoise;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.radio-choice {
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio-choice input[type='radio'] {
+  margin-right: 5px;
+}
+
+.radio-choice label {
+  margin-right: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#button-wrapper {
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+}
+
+#new-book-btn {
+  margin: 5vh auto;
+  background-color: var(--rose-pink);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid white;
+}
+
+dialog {
+  margin: auto;
+}
+
+input[type="text"] {
+  padding-left: 0.3rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <title>Library</title>
+</head>
+<body>
+  <dialog id="dialog">
+    <form>
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title-input" name="title">
+      </div>
+      <div>
+        <label for="author">Author:</label>
+        <input type="text" id="author-input" name="author">
+      </div>
+      <div>
+        <label for="pages">Page Count:</label>
+        <input type="text" id="pages-input" name="pages">
+      </div>
+      <div>
+        <label for="read">Have you finished reading it?</label>
+        <div class="radio-choice">
+          <input type="radio" id="have-read" name="read" value="yes" checked>
+          <label for="have-read">Yes</label>
+          <input type="radio" id="not-read" name="read" value="no">
+          <label for="not-read">No</label>
+        </div>
+      </div>
+      <div id="button-wrapper">
+        <button id="add-book-btn">Add Book</button>
+        <button id="cancel-btn" formmethod="dialog">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+  <button id="new-book-btn">New Book</button>
+  <div id="library"></div>
+  <script src="script.js"></script>
+</body>
+</html>
